@@ -3,16 +3,21 @@ const app = express();
 const path = require('path');
 const router = express.Router();
 
-router.get('/',function(req,res){
-  res.sendFile(path.join(__dirname+'/mother_you/MotherYou.html'));
+// Express Middleware for serving static files
+app.use(express.static(path.join(__dirname, 'mother_you')));
+app.use(express.static(path.join(__dirname, 'mother_us')));
+app.use(express.static(path.join(__dirname, 'mother_me')));
+
+app.get('/mother_you', function(req, res) {
+    res.redirect('MotherYou.html');
 });
 
-router.get('/mother_us',function(req,res){
-  res.sendFile(path.join(__dirname+'/mother_us/MotherUs.html'));
+app.get('/mother_us', function(req, res) {
+    res.redirect('MotherUs.html');
 });
 
-router.get('/mother_me',function(req,res){
-  res.sendFile(path.join(__dirname+'/mother_me/MotherMe.html'));
+app.get('/mother_me', function(req, res) {
+    res.redirect('MotherMe.html');
 });
 
 //add the router
