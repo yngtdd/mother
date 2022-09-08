@@ -4,9 +4,14 @@ const path = require('path');
 const router = express.Router();
 
 // Express Middleware for serving static files
+app.use(express.static(path.join(__dirname, 'about')));
 app.use(express.static(path.join(__dirname, 'mother_you')));
 app.use(express.static(path.join(__dirname, 'mother_us')));
 app.use(express.static(path.join(__dirname, 'mother_me')));
+
+app.get('/', function(req, res) {
+    res.redirect('about.html');
+});
 
 app.get('/mother_you', function(req, res) {
     res.redirect('MotherYou.html');
