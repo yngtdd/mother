@@ -1,0 +1,19 @@
+{
+  "name": "Mother Poems",
+  "version": "1.0.0",
+  "description": "Poetry by Emily Moeck",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./bin/www",
+    "devstart": "DEBUG=myapp:* nodemon ./bin/www"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
