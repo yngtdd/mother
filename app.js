@@ -13,16 +13,16 @@ app.get('/', function(req, res) {
     res.redirect('about.html');
 });
 
-app.get('/mother_you', function(req, res) {
-    res.redirect('MotherYou.html');
-});
-
 app.get('/mother_us', function(req, res) {
     res.redirect('MotherUs.html');
 });
 
 app.get('/mother_me', function(req, res) {
     res.redirect('MotherMe.html');
+});
+
+app.get('/mother_you', function(req, res) {
+    res.redirect('MotherYou.html');
 });
 
 //add the router
