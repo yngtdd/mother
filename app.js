@@ -5,9 +5,9 @@ const router = express.Router();
 
 // Express Middleware for serving static files
 app.use(express.static(path.join(__dirname, 'about')));
-app.use(express.static(path.join(__dirname, 'mother_you')));
 app.use(express.static(path.join(__dirname, 'mother_us')));
 app.use(express.static(path.join(__dirname, 'mother_me')));
+app.use(express.static(path.join(__dirname, 'mother_you')));
 
 app.get('/', function(req, res) {
     res.redirect('about.html');
