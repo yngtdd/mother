@@ -4,7 +4,7 @@
   "description": "Poetry by Emily Moeck",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node ./app.js",
     "devstart": "DEBUG=myapp:* nodemon ./bin/www"
   },
   "keywords": [],
