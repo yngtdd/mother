@@ -14,14 +14,17 @@ app.get('/', function(req, res) {
 });
 
 app.get('/mother_us', function(req, res) {
+    console.log('Redirecting to MotherUs');
     res.redirect('MotherUs.html');
 });
 
 app.get('/mother_me', function(req, res) {
+    console.log('Redirecting to MotherMe');
     res.redirect('MotherMe.html');
 });
 
 app.get('/mother_you', function(req, res) {
+    console.log('Redirecting to MotherYou');
     res.redirect('MotherYou.html');
 });
 
@@ -29,4 +32,3 @@ app.get('/mother_you', function(req, res) {
 app.use('/', router);
 app.listen(process.env.port || 8080);
 
-console.log('Running at Port 3000');
